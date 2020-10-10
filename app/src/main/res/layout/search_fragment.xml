@@ -67,7 +67,8 @@
                 android:inputType="textNoSuggestions"
                 android:imeOptions="actionSearch"
                 android:hint="@string/search_hint"
-                tools:text="google" />
+                tools:text="google"
+                android:autofillHints="@string/search_hint" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <ProgressBar
