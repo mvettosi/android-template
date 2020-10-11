@@ -16,6 +16,7 @@
 
 package com.android.example.github.ui.repo
 
+import androidx.hilt.lifecycle.ViewModelInject
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
@@ -24,12 +25,11 @@ import com.android.example.github.data.model.Contributor
 import com.android.example.github.data.model.Repo
 import com.android.example.github.data.model.Resource
 import com.android.example.github.repository.RepoRepository
-import com.android.example.github.testing.OpenForTesting
 import com.android.example.github.repository.util.AbsentLiveData
-import javax.inject.Inject
+import com.android.example.github.testing.OpenForTesting
 
 @OpenForTesting
-class RepoViewModel @Inject constructor(repository: RepoRepository) : ViewModel() {
+class RepoViewModel @ViewModelInject constructor(repository: RepoRepository) : ViewModel() {
     private val _repoId: MutableLiveData<RepoId> = MutableLiveData()
     val repoId: LiveData<RepoId>
         get() = _repoId

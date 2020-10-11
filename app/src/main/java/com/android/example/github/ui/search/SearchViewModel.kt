@@ -16,19 +16,19 @@
 
 package com.android.example.github.ui.search
 
+import androidx.hilt.lifecycle.ViewModelInject
 import androidx.lifecycle.*
 import androidx.lifecycle.Observer
 import com.android.example.github.data.model.Repo
 import com.android.example.github.data.model.Resource
 import com.android.example.github.data.model.Status
 import com.android.example.github.repository.RepoRepository
-import com.android.example.github.testing.OpenForTesting
 import com.android.example.github.repository.util.AbsentLiveData
+import com.android.example.github.testing.OpenForTesting
 import java.util.*
-import javax.inject.Inject
 
 @OpenForTesting
-class SearchViewModel @Inject constructor(repoRepository: RepoRepository) : ViewModel() {
+class SearchViewModel @ViewModelInject constructor(repoRepository: RepoRepository) : ViewModel() {
 
     private val _query = MutableLiveData<String>()
     private val nextPageHandler = NextPageHandler(repoRepository)

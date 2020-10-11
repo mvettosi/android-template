@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.android.example.github.di
+package com.android.example.github.data
 
 import android.app.Application
 import androidx.room.Room
@@ -25,11 +25,14 @@ import com.android.example.github.data.db.UserDao
 import com.android.example.github.repository.util.LiveDataCallAdapterFactory
 import dagger.Module
 import dagger.Provides
+import dagger.hilt.InstallIn
+import dagger.hilt.android.components.ApplicationComponent
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 import javax.inject.Singleton
 
-@Module(includes = [ViewModelModule::class])
+@InstallIn(ApplicationComponent::class)
+@Module
 class AppModule {
     @Singleton
     @Provides
