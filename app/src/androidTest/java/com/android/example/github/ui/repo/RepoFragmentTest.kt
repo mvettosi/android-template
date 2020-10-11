@@ -36,7 +36,7 @@ import com.android.example.github.data.model.Contributor
 import com.android.example.github.data.model.Repo
 import com.android.example.github.data.model.Resource
 import com.android.example.github.ui.binding.FragmentBindingAdapters
-import com.android.example.github.util.*
+import com.android.example.github.repository.util.*
 import org.hamcrest.CoreMatchers.not
 import org.junit.Before
 import org.junit.Rule

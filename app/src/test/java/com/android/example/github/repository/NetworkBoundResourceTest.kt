@@ -23,10 +23,10 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.Observer
 import com.android.example.github.data.api.ApiResponse
 import com.android.example.github.data.model.Resource
-import com.android.example.github.util.ApiUtil
-import com.android.example.github.util.CountingAppExecutors
-import com.android.example.github.util.InstantAppExecutors
-import com.android.example.github.util.mock
+import com.android.example.github.repository.util.ApiUtil
+import com.android.example.github.repository.util.CountingAppExecutors
+import com.android.example.github.repository.util.InstantAppExecutors
+import com.android.example.github.repository.util.mock
 import okhttp3.MediaType
 import okhttp3.ResponseBody
 import org.hamcrest.CoreMatchers.`is`

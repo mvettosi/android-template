@@ -23,7 +23,7 @@ import com.android.example.github.data.model.Resource
 import com.android.example.github.data.model.Status
 import com.android.example.github.repository.RepoRepository
 import com.android.example.github.testing.OpenForTesting
-import com.android.example.github.util.AbsentLiveData
+import com.android.example.github.repository.util.AbsentLiveData
 import java.util.*
 import javax.inject.Inject
 

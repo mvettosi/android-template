@@ -28,8 +28,8 @@ import com.android.example.github.data.model.Contributor
 import com.android.example.github.data.model.Repo
 import com.android.example.github.data.model.RepoSearchResult
 import com.android.example.github.data.model.Resource
-import com.android.example.github.util.*
-import com.android.example.github.util.ApiUtil.successCall
+import com.android.example.github.repository.util.*
+import com.android.example.github.repository.util.ApiUtil.successCall
 import org.hamcrest.CoreMatchers.`is`
 import org.hamcrest.MatcherAssert.assertThat
 import org.junit.Before

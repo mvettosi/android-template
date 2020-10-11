@@ -22,7 +22,7 @@ import com.android.example.github.data.model.Contributor
 import com.android.example.github.data.model.Repo
 import com.android.example.github.data.model.Resource
 import com.android.example.github.repository.RepoRepository
-import com.android.example.github.util.mock
+import com.android.example.github.repository.util.mock
 import org.hamcrest.CoreMatchers.notNullValue
 import org.hamcrest.MatcherAssert.assertThat
 import org.junit.Rule

@@ -14,19 +14,17 @@
  * limitations under the License.
  */
 
-package com.android.example.github.util
+package com.android.example.github.repository.util
 
-import android.app.Application
-import android.content.Context
-import androidx.test.runner.AndroidJUnitRunner
+import androidx.lifecycle.LiveData
+import androidx.lifecycle.MutableLiveData
+import com.android.example.github.data.api.ApiResponse
+import retrofit2.Response
 
-import com.android.example.github.TestApp
+object ApiUtil {
+    fun <T : Any> successCall(data: T) = createCall(Response.success(data))
 
-/**
- * Custom runner to disable dependency injection.
- */
-class GithubTestRunner : AndroidJUnitRunner() {
-    override fun newApplication(cl: ClassLoader, className: String, context: Context): Application {
-        return super.newApplication(cl, TestApp::class.java.name, context)
-    }
+    fun <T : Any> createCall(response: Response<T>) = MutableLiveData<ApiResponse<T>>().apply {
+        value = ApiResponse.create(response)
+    } as LiveData<ApiResponse<T>>
 }

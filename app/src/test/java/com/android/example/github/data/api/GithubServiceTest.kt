@@ -18,8 +18,8 @@ package com.android.example.github.data.api
 
 import androidx.arch.core.executor.testing.InstantTaskExecutorRule
 import com.android.example.github.data.model.User
-import com.android.example.github.util.LiveDataCallAdapterFactory
-import com.android.example.github.util.getOrAwaitValue
+import com.android.example.github.repository.util.LiveDataCallAdapterFactory
+import com.android.example.github.repository.util.getOrAwaitValue
 import okhttp3.mockwebserver.MockResponse
 import okhttp3.mockwebserver.MockWebServer
 import okio.Okio

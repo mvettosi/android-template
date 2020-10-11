@@ -14,22 +14,19 @@
  * limitations under the License.
  */
 
-package com.android.example.github.util
+package com.android.example.github.repository.util
 
-import androidx.lifecycle.LiveData
+import android.app.Application
+import android.content.Context
+import androidx.test.runner.AndroidJUnitRunner
+
+import com.android.example.github.TestApp
 
 /**
- * A LiveData class that has `null` value.
+ * Custom runner to disable dependency injection.
  */
-class AbsentLiveData<T : Any?> private constructor(): LiveData<T>() {
-    init {
-        // use post instead of set since this can be created on any thread
-        postValue(null)
-    }
-
-    companion object {
-        fun <T> create(): LiveData<T> {
-            return AbsentLiveData()
-        }
+class GithubTestRunner : AndroidJUnitRunner() {
+    override fun newApplication(cl: ClassLoader, className: String, context: Context): Application {
+        return super.newApplication(cl, TestApp::class.java.name, context)
     }
 }

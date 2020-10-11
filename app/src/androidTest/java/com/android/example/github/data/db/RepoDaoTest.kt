@@ -19,8 +19,8 @@ package com.android.example.github.data.db
 import android.database.sqlite.SQLiteException
 import androidx.arch.core.executor.testing.InstantTaskExecutorRule
 import androidx.test.ext.junit.runners.AndroidJUnit4
-import com.android.example.github.util.TestUtil
-import com.android.example.github.util.getOrAwaitValue
+import com.android.example.github.repository.util.TestUtil
+import com.android.example.github.repository.util.getOrAwaitValue
 import org.hamcrest.CoreMatchers.`is`
 import org.hamcrest.CoreMatchers.notNullValue
 import org.hamcrest.MatcherAssert.assertThat

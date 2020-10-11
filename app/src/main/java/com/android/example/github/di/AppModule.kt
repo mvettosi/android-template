@@ -22,7 +22,7 @@ import com.android.example.github.data.api.GithubService
 import com.android.example.github.data.db.GithubDb
 import com.android.example.github.data.db.RepoDao
 import com.android.example.github.data.db.UserDao
-import com.android.example.github.util.LiveDataCallAdapterFactory
+import com.android.example.github.repository.util.LiveDataCallAdapterFactory
 import dagger.Module
 import dagger.Provides
 import retrofit2.Retrofit

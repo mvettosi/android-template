@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.android.example.github.util
+package com.android.example.github.repository.util
 
 import android.os.Bundle
 import android.view.LayoutInflater

@@ -26,7 +26,7 @@ import com.android.example.github.data.model.User
 import com.android.example.github.repository.RepoRepository
 import com.android.example.github.repository.UserRepository
 import com.android.example.github.testing.OpenForTesting
-import com.android.example.github.util.AbsentLiveData
+import com.android.example.github.repository.util.AbsentLiveData
 import javax.inject.Inject
 
 @OpenForTesting

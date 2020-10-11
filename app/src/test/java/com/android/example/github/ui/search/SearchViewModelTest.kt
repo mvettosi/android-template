@@ -23,7 +23,7 @@ import androidx.lifecycle.Observer
 import com.android.example.github.data.model.Repo
 import com.android.example.github.data.model.Resource
 import com.android.example.github.repository.RepoRepository
-import com.android.example.github.util.mock
+import com.android.example.github.repository.util.mock
 import org.hamcrest.CoreMatchers.`is`
 import org.hamcrest.MatcherAssert.assertThat
 import org.junit.Before

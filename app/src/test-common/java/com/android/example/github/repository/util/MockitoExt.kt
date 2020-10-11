@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2017 The Android Open Source Project
+ * Copyright (C) 2018 The Android Open Source Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -14,14 +14,14 @@
  * limitations under the License.
  */
 
-package com.android.example.github.util
+package com.android.example.github.repository.util
 
-import com.android.example.github.AppExecutors
+import org.mockito.ArgumentCaptor
+import org.mockito.Mockito
 
-import java.util.concurrent.Executor
+/**
+ * a kotlin friendly mock that handles generics
+ */
+inline fun <reified T> mock(): T = Mockito.mock(T::class.java)
 
-class InstantAppExecutors : AppExecutors(instant, instant, instant) {
-    companion object {
-        private val instant = Executor { it.run() }
-    }
-}
+inline fun <reified T> argumentCaptor(): ArgumentCaptor<T> = ArgumentCaptor.forClass(T::class.java)

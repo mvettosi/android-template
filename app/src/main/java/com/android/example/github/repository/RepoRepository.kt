@@ -29,8 +29,8 @@ import com.android.example.github.data.model.Repo
 import com.android.example.github.data.model.RepoSearchResult
 import com.android.example.github.data.model.Resource
 import com.android.example.github.testing.OpenForTesting
-import com.android.example.github.util.AbsentLiveData
-import com.android.example.github.util.RateLimiter
+import com.android.example.github.repository.util.AbsentLiveData
+import com.android.example.github.repository.util.RateLimiter
 import java.util.concurrent.TimeUnit
 import javax.inject.Inject
 import javax.inject.Singleton

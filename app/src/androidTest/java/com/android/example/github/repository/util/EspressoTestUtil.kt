@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.android.example.github.util
+package com.android.example.github.repository.util
 
 import android.graphics.Color
 import android.graphics.drawable.ColorDrawable

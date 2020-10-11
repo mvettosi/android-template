@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.android.example.github.util
+package com.android.example.github.repository.util
 
 import com.android.example.github.AppExecutors
 import java.util.concurrent.Executor

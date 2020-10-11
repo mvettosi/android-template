@@ -14,17 +14,14 @@
  * limitations under the License.
  */
 
-package com.android.example.github.util
+package com.android.example.github.repository.util
 
-import androidx.lifecycle.LiveData
-import androidx.lifecycle.MutableLiveData
-import com.android.example.github.data.api.ApiResponse
-import retrofit2.Response
+import com.android.example.github.AppExecutors
 
-object ApiUtil {
-    fun <T : Any> successCall(data: T) = createCall(Response.success(data))
+import java.util.concurrent.Executor
 
-    fun <T : Any> createCall(response: Response<T>) = MutableLiveData<ApiResponse<T>>().apply {
-        value = ApiResponse.create(response)
-    } as LiveData<ApiResponse<T>>
+class InstantAppExecutors : AppExecutors(instant, instant, instant) {
+    companion object {
+        private val instant = Executor { it.run() }
+    }
 }

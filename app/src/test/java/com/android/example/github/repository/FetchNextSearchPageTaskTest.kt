@@ -24,8 +24,8 @@ import com.android.example.github.data.db.GithubDb
 import com.android.example.github.data.db.RepoDao
 import com.android.example.github.data.model.RepoSearchResult
 import com.android.example.github.data.model.Resource
-import com.android.example.github.util.TestUtil
-import com.android.example.github.util.mock
+import com.android.example.github.repository.util.TestUtil
+import com.android.example.github.repository.util.mock
 import okhttp3.Headers
 import okhttp3.MediaType
 import okhttp3.ResponseBody

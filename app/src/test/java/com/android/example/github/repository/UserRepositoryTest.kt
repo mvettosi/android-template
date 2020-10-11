@@ -23,10 +23,10 @@ import com.android.example.github.data.api.GithubService
 import com.android.example.github.data.db.UserDao
 import com.android.example.github.data.model.Resource
 import com.android.example.github.data.model.User
-import com.android.example.github.util.ApiUtil
-import com.android.example.github.util.InstantAppExecutors
-import com.android.example.github.util.TestUtil
-import com.android.example.github.util.mock
+import com.android.example.github.repository.util.ApiUtil
+import com.android.example.github.repository.util.InstantAppExecutors
+import com.android.example.github.repository.util.TestUtil
+import com.android.example.github.repository.util.mock
 import org.junit.Rule
 import org.junit.Test
 import org.junit.runner.RunWith
