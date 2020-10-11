@@ -22,10 +22,10 @@ import com.android.example.github.api.GithubService
 import com.android.example.github.api.RepoSearchResponse
 import com.android.example.github.db.GithubDb
 import com.android.example.github.db.RepoDao
+import com.android.example.github.model.RepoSearchResult
+import com.android.example.github.model.Resource
 import com.android.example.github.util.TestUtil
 import com.android.example.github.util.mock
-import com.android.example.github.vo.RepoSearchResult
-import com.android.example.github.vo.Resource
 import okhttp3.Headers
 import okhttp3.MediaType
 import okhttp3.ResponseBody

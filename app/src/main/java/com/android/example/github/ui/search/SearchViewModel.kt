@@ -18,12 +18,12 @@ package com.android.example.github.ui.search
 
 import androidx.lifecycle.*
 import androidx.lifecycle.Observer
+import com.android.example.github.model.Repo
+import com.android.example.github.model.Resource
+import com.android.example.github.model.Status
 import com.android.example.github.repository.RepoRepository
 import com.android.example.github.testing.OpenForTesting
 import com.android.example.github.util.AbsentLiveData
-import com.android.example.github.vo.Repo
-import com.android.example.github.vo.Resource
-import com.android.example.github.vo.Status
 import java.util.*
 import javax.inject.Inject
 

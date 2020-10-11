@@ -24,7 +24,7 @@ import androidx.recyclerview.widget.DiffUtil
 import com.android.example.github.AppExecutors
 import com.android.example.github.R
 import com.android.example.github.databinding.RepoItemBinding
-import com.android.example.github.vo.Repo
+import com.android.example.github.model.Repo
 
 /**
  * A RecyclerView adapter for [Repo] class.

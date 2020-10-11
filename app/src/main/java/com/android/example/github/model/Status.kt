@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.android.example.github.vo
+package com.android.example.github.model
 
 /**
  * Status of a resource that is provided to the UI.

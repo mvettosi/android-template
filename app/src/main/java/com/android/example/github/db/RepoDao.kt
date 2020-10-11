@@ -23,10 +23,10 @@ import androidx.room.Dao
 import androidx.room.Insert
 import androidx.room.OnConflictStrategy
 import androidx.room.Query
+import com.android.example.github.model.Contributor
+import com.android.example.github.model.Repo
+import com.android.example.github.model.RepoSearchResult
 import com.android.example.github.testing.OpenForTesting
-import com.android.example.github.vo.Contributor
-import com.android.example.github.vo.Repo
-import com.android.example.github.vo.RepoSearchResult
 
 /**
  * Interface for database access on Repo related operations.

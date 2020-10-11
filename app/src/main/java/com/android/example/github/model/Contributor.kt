@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.android.example.github.vo
+package com.android.example.github.model
 
 import androidx.room.Entity
 import androidx.room.ForeignKey

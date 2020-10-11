@@ -17,7 +17,7 @@
 package com.android.example.github.api
 
 
-import com.android.example.github.vo.Repo
+import com.android.example.github.model.Repo
 import com.google.gson.annotations.SerializedName
 
 /**

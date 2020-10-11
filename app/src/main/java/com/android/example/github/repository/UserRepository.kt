@@ -20,9 +20,9 @@ import androidx.lifecycle.LiveData
 import com.android.example.github.AppExecutors
 import com.android.example.github.api.GithubService
 import com.android.example.github.db.UserDao
+import com.android.example.github.model.Resource
+import com.android.example.github.model.User
 import com.android.example.github.testing.OpenForTesting
-import com.android.example.github.vo.Resource
-import com.android.example.github.vo.User
 import javax.inject.Inject
 import javax.inject.Singleton
 

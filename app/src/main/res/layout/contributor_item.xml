@@ -22,7 +22,7 @@
 
         <variable
             name="contributor"
-            type="com.android.example.github.vo.Contributor" />
+            type="com.android.example.github.model.Contributor" />
     </data>
 
     <androidx.cardview.widget.CardView

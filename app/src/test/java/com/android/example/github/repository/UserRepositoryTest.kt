@@ -21,12 +21,12 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.Observer
 import com.android.example.github.api.GithubService
 import com.android.example.github.db.UserDao
+import com.android.example.github.model.Resource
+import com.android.example.github.model.User
 import com.android.example.github.util.ApiUtil
 import com.android.example.github.util.InstantAppExecutors
 import com.android.example.github.util.TestUtil
 import com.android.example.github.util.mock
-import com.android.example.github.vo.Resource
-import com.android.example.github.vo.User
 import org.junit.Rule
 import org.junit.Test
 import org.junit.runner.RunWith

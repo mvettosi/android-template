@@ -21,7 +21,7 @@ import androidx.room.Dao
 import androidx.room.Insert
 import androidx.room.OnConflictStrategy
 import androidx.room.Query
-import com.android.example.github.vo.User
+import com.android.example.github.model.User
 
 /**
  * Interface for database access for User related operations.

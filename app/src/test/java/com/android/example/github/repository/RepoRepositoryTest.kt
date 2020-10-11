@@ -24,12 +24,12 @@ import com.android.example.github.api.GithubService
 import com.android.example.github.api.RepoSearchResponse
 import com.android.example.github.db.GithubDb
 import com.android.example.github.db.RepoDao
+import com.android.example.github.model.Contributor
+import com.android.example.github.model.Repo
+import com.android.example.github.model.RepoSearchResult
+import com.android.example.github.model.Resource
 import com.android.example.github.util.*
 import com.android.example.github.util.ApiUtil.successCall
-import com.android.example.github.vo.Contributor
-import com.android.example.github.vo.Repo
-import com.android.example.github.vo.RepoSearchResult
-import com.android.example.github.vo.Resource
 import org.hamcrest.CoreMatchers.`is`
 import org.hamcrest.MatcherAssert.assertThat
 import org.junit.Before
