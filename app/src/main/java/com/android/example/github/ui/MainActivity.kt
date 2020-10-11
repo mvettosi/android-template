@@ -14,11 +14,12 @@
  * limitations under the License.
  */
 
-package com.android.example.github
+package com.android.example.github.ui
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
+import com.android.example.github.R
 import dagger.android.DispatchingAndroidInjector
 import dagger.android.support.HasSupportFragmentInjector
 import javax.inject.Inject

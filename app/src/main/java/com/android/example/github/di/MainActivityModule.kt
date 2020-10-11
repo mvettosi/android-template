@@ -16,7 +16,7 @@
 
 package com.android.example.github.di
 
-import com.android.example.github.MainActivity
+import com.android.example.github.ui.MainActivity
 
 import dagger.Module
 import dagger.android.ContributesAndroidInjector
