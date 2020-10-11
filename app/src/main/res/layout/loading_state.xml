@@ -19,9 +19,9 @@
 
     <data>
 
-        <import type="com.android.example.github.model.Resource" />
+        <import type="com.android.example.github.data.model.Resource" />
 
-        <import type="com.android.example.github.model.Status" />
+        <import type="com.android.example.github.data.model.Status" />
 
         <variable
             name="resource"

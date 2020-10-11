@@ -18,7 +18,7 @@ package com.android.example.github.ui.search
 
 import androidx.arch.core.executor.testing.InstantTaskExecutorRule
 import androidx.lifecycle.MutableLiveData
-import com.android.example.github.model.Resource
+import com.android.example.github.data.model.Resource
 import com.android.example.github.repository.RepoRepository
 import org.hamcrest.CoreMatchers.*
 import org.hamcrest.MatcherAssert.assertThat

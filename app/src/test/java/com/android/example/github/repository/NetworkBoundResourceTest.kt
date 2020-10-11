@@ -22,7 +22,7 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.Observer
 import com.android.example.github.api.ApiResponse
-import com.android.example.github.model.Resource
+import com.android.example.github.data.model.Resource
 import com.android.example.github.util.ApiUtil
 import com.android.example.github.util.CountingAppExecutors
 import com.android.example.github.util.InstantAppExecutors

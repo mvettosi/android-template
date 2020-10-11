@@ -24,8 +24,8 @@ import androidx.databinding.DataBindingUtil
 import androidx.recyclerview.widget.DiffUtil
 import com.android.example.github.AppExecutors
 import com.android.example.github.R
+import com.android.example.github.data.model.Contributor
 import com.android.example.github.databinding.ContributorItemBinding
-import com.android.example.github.model.Contributor
 import com.android.example.github.ui.common.DataBoundListAdapter
 
 class ContributorAdapter(

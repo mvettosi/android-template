@@ -17,9 +17,9 @@
 package com.android.example.github.api
 
 import androidx.lifecycle.LiveData
-import com.android.example.github.model.Contributor
-import com.android.example.github.model.Repo
-import com.android.example.github.model.User
+import com.android.example.github.data.model.Contributor
+import com.android.example.github.data.model.Repo
+import com.android.example.github.data.model.User
 import retrofit2.Call
 import retrofit2.http.GET
 import retrofit2.http.Path

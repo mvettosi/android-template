@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.android.example.github.model
+package com.android.example.github.data.model
 
 import androidx.room.Embedded
 import androidx.room.Entity

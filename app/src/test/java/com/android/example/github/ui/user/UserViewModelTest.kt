@@ -19,9 +19,9 @@ package com.android.example.github.ui.user
 import androidx.arch.core.executor.testing.InstantTaskExecutorRule
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.Observer
-import com.android.example.github.model.Repo
-import com.android.example.github.model.Resource
-import com.android.example.github.model.User
+import com.android.example.github.data.model.Repo
+import com.android.example.github.data.model.Resource
+import com.android.example.github.data.model.User
 import com.android.example.github.repository.RepoRepository
 import com.android.example.github.repository.UserRepository
 import com.android.example.github.util.TestUtil

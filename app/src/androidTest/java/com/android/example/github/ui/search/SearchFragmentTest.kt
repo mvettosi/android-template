@@ -31,8 +31,8 @@ import androidx.test.espresso.matcher.ViewMatchers.*
 import androidx.test.ext.junit.runners.AndroidJUnit4
 import com.android.example.github.R
 import com.android.example.github.binding.FragmentBindingAdapters
-import com.android.example.github.model.Repo
-import com.android.example.github.model.Resource
+import com.android.example.github.data.model.Repo
+import com.android.example.github.data.model.Resource
 import com.android.example.github.util.*
 import org.hamcrest.CoreMatchers.not
 import org.junit.Before

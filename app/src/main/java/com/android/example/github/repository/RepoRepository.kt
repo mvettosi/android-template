@@ -22,12 +22,12 @@ import com.android.example.github.AppExecutors
 import com.android.example.github.api.ApiSuccessResponse
 import com.android.example.github.api.GithubService
 import com.android.example.github.api.RepoSearchResponse
+import com.android.example.github.data.model.Contributor
+import com.android.example.github.data.model.Repo
+import com.android.example.github.data.model.RepoSearchResult
+import com.android.example.github.data.model.Resource
 import com.android.example.github.db.GithubDb
 import com.android.example.github.db.RepoDao
-import com.android.example.github.model.Contributor
-import com.android.example.github.model.Repo
-import com.android.example.github.model.RepoSearchResult
-import com.android.example.github.model.Resource
 import com.android.example.github.testing.OpenForTesting
 import com.android.example.github.util.AbsentLiveData
 import com.android.example.github.util.RateLimiter

@@ -19,9 +19,9 @@ package com.android.example.github.repository
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import com.android.example.github.api.*
+import com.android.example.github.data.model.RepoSearchResult
+import com.android.example.github.data.model.Resource
 import com.android.example.github.db.GithubDb
-import com.android.example.github.model.RepoSearchResult
-import com.android.example.github.model.Resource
 import java.io.IOException
 
 /**

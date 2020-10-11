@@ -20,13 +20,13 @@
 
     <data>
 
-        <import type="com.android.example.github.model.Status" />
+        <import type="com.android.example.github.data.model.Status" />
 
-        <import type="com.android.example.github.model.Resource" />
+        <import type="com.android.example.github.data.model.Resource" />
 
         <import type="androidx.lifecycle.LiveData"/>
 
-        <import type="com.android.example.github.model.Repo"/>
+        <import type="com.android.example.github.data.model.Repo"/>
 
         <variable
             name="repo"
