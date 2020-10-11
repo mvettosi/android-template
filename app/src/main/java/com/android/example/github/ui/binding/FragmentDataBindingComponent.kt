@@ -14,18 +14,16 @@
  * limitations under the License.
  */
 
-package com.android.example.github.binding
+package com.android.example.github.ui.binding
 
-import android.view.View
-import androidx.databinding.BindingAdapter
+import androidx.databinding.DataBindingComponent
+import androidx.fragment.app.Fragment
 
 /**
- * Data Binding adapters specific to the app.
+ * A Data Binding Component implementation for fragments.
  */
-object BindingAdapters {
-    @JvmStatic
-    @BindingAdapter("visibleGone")
-    fun showHide(view: View, show: Boolean) {
-        view.visibility = if (show) View.VISIBLE else View.GONE
-    }
+class FragmentDataBindingComponent(fragment: Fragment) : DataBindingComponent {
+    private val adapter = FragmentBindingAdapters(fragment)
+
+    override fun getFragmentBindingAdapters() = adapter
 }

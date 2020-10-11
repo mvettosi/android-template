@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.android.example.github.viewmodel
+package com.android.example.github.ui
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider

@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.android.example.github.binding
+package com.android.example.github.ui.binding
 
 import android.graphics.drawable.Drawable
 import android.widget.ImageView

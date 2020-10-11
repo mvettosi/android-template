@@ -36,9 +36,9 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.android.example.github.AppExecutors
 import com.android.example.github.R
-import com.android.example.github.binding.FragmentDataBindingComponent
 import com.android.example.github.databinding.SearchFragmentBinding
 import com.android.example.github.di.Injectable
+import com.android.example.github.ui.binding.FragmentDataBindingComponent
 import com.android.example.github.ui.common.RepoListAdapter
 import com.android.example.github.ui.common.RetryCallback
 import com.android.example.github.util.autoCleared
