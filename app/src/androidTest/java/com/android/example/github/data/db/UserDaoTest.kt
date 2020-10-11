@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.android.example.github.db
+package com.android.example.github.data.db
 
 import androidx.arch.core.executor.testing.InstantTaskExecutorRule
 import androidx.test.ext.junit.runners.AndroidJUnit4

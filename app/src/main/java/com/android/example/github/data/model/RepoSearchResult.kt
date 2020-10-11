@@ -18,7 +18,7 @@ package com.android.example.github.data.model
 
 import androidx.room.Entity
 import androidx.room.TypeConverters
-import com.android.example.github.db.GithubTypeConverters
+import com.android.example.github.data.db.GithubTypeConverters
 
 @Entity(primaryKeys = ["query"])
 @TypeConverters(GithubTypeConverters::class)

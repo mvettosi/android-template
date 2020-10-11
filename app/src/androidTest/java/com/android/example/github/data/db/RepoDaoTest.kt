@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.android.example.github.db
+package com.android.example.github.data.db
 
 import android.database.sqlite.SQLiteException
 import androidx.arch.core.executor.testing.InstantTaskExecutorRule

@@ -18,7 +18,7 @@ package com.android.example.github.util
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
-import com.android.example.github.api.ApiResponse
+import com.android.example.github.data.api.ApiResponse
 import retrofit2.Response
 
 object ApiUtil {

@@ -18,12 +18,12 @@ package com.android.example.github.repository
 
 import androidx.arch.core.executor.testing.InstantTaskExecutorRule
 import androidx.lifecycle.Observer
-import com.android.example.github.api.GithubService
-import com.android.example.github.api.RepoSearchResponse
+import com.android.example.github.data.api.GithubService
+import com.android.example.github.data.api.RepoSearchResponse
+import com.android.example.github.data.db.GithubDb
+import com.android.example.github.data.db.RepoDao
 import com.android.example.github.data.model.RepoSearchResult
 import com.android.example.github.data.model.Resource
-import com.android.example.github.db.GithubDb
-import com.android.example.github.db.RepoDao
 import com.android.example.github.util.TestUtil
 import com.android.example.github.util.mock
 import okhttp3.Headers

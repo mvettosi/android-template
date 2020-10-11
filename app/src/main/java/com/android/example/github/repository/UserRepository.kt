@@ -18,10 +18,10 @@ package com.android.example.github.repository
 
 import androidx.lifecycle.LiveData
 import com.android.example.github.AppExecutors
-import com.android.example.github.api.GithubService
+import com.android.example.github.data.api.GithubService
+import com.android.example.github.data.db.UserDao
 import com.android.example.github.data.model.Resource
 import com.android.example.github.data.model.User
-import com.android.example.github.db.UserDao
 import com.android.example.github.testing.OpenForTesting
 import javax.inject.Inject
 import javax.inject.Singleton

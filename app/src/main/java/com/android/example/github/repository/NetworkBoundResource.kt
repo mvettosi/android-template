@@ -21,10 +21,10 @@ import androidx.annotation.WorkerThread
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MediatorLiveData
 import com.android.example.github.AppExecutors
-import com.android.example.github.api.ApiEmptyResponse
-import com.android.example.github.api.ApiErrorResponse
-import com.android.example.github.api.ApiResponse
-import com.android.example.github.api.ApiSuccessResponse
+import com.android.example.github.data.api.ApiEmptyResponse
+import com.android.example.github.data.api.ApiErrorResponse
+import com.android.example.github.data.api.ApiResponse
+import com.android.example.github.data.api.ApiSuccessResponse
 import com.android.example.github.data.model.Resource
 
 /**

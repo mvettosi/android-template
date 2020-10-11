@@ -14,31 +14,22 @@
  * limitations under the License.
  */
 
-package com.android.example.github.db
+package com.android.example.github.data.api
 
 
-import androidx.room.Database
-import androidx.room.RoomDatabase
-import com.android.example.github.data.model.Contributor
 import com.android.example.github.data.model.Repo
-import com.android.example.github.data.model.RepoSearchResult
-import com.android.example.github.data.model.User
+import com.google.gson.annotations.SerializedName
 
 /**
- * Main database description.
+ * Simple object to hold repo search responses. This is different from the Entity in the database
+ * because we are keeping a search result in 1 row and denormalizing list of results into a single
+ * column.
  */
-@Database(
-    entities = [
-        User::class,
-        Repo::class,
-        Contributor::class,
-        RepoSearchResult::class],
-    version = 3,
-    exportSchema = false
-)
-abstract class GithubDb : RoomDatabase() {
-
-    abstract fun userDao(): UserDao
-
-    abstract fun repoDao(): RepoDao
+data class RepoSearchResponse(
+    @SerializedName("total_count")
+    val total: Int = 0,
+    @SerializedName("items")
+    val items: List<Repo>
+) {
+    var nextPage: Int? = null
 }

@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.android.example.github.api
+package com.android.example.github.data.api
 
 import retrofit2.Response
 import timber.log.Timber
