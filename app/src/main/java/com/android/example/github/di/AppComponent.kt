@@ -17,7 +17,7 @@
 package com.android.example.github.di
 
 import android.app.Application
-import com.android.example.github.GithubApp
+import com.android.example.github.App
 import dagger.BindsInstance
 import dagger.Component
 import dagger.android.AndroidInjectionModule
@@ -39,5 +39,5 @@ interface AppComponent {
         fun build(): AppComponent
     }
 
-    fun inject(githubApp: GithubApp)
+    fun inject(app: App)
 }

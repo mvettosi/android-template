@@ -25,7 +25,7 @@ import timber.log.Timber
 import javax.inject.Inject
 
 
-class GithubApp : Application(), HasActivityInjector {
+class App : Application(), HasActivityInjector {
     @Inject
     lateinit var dispatchingAndroidInjector: DispatchingAndroidInjector<Activity>
 
