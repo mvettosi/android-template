@@ -30,9 +30,9 @@ import androidx.navigation.fragment.FragmentNavigatorExtras
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
 import androidx.transition.TransitionInflater
-import com.android.example.github.AppExecutors
 import com.android.example.github.R
 import com.android.example.github.databinding.RepoFragmentBinding
+import com.android.example.github.repository.util.AppExecutors
 import com.android.example.github.repository.util.autoCleared
 import com.android.example.github.ui.binding.FragmentDataBindingComponent
 import com.android.example.github.ui.common.RetryCallback

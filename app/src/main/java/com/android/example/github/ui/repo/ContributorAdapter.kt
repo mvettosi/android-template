@@ -22,16 +22,16 @@ import android.widget.ImageView
 import androidx.databinding.DataBindingComponent
 import androidx.databinding.DataBindingUtil
 import androidx.recyclerview.widget.DiffUtil
-import com.android.example.github.AppExecutors
 import com.android.example.github.R
 import com.android.example.github.data.model.Contributor
 import com.android.example.github.databinding.ContributorItemBinding
+import com.android.example.github.repository.util.AppExecutors
 import com.android.example.github.ui.common.DataBoundListAdapter
 
 class ContributorAdapter(
-    private val dataBindingComponent: DataBindingComponent,
-    appExecutors: AppExecutors,
-    private val callback: ((Contributor, ImageView) -> Unit)?
+        private val dataBindingComponent: DataBindingComponent,
+        appExecutors: AppExecutors,
+        private val callback: ((Contributor, ImageView) -> Unit)?
 ) : DataBoundListAdapter<Contributor, ContributorItemBinding>(
     appExecutors = appExecutors,
     diffCallback = object : DiffUtil.ItemCallback<Contributor>() {

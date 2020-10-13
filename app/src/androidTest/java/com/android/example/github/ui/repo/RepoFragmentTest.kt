@@ -35,8 +35,8 @@ import com.android.example.github.R
 import com.android.example.github.data.model.Contributor
 import com.android.example.github.data.model.Repo
 import com.android.example.github.data.model.Resource
-import com.android.example.github.ui.binding.FragmentBindingAdapters
 import com.android.example.github.repository.util.*
+import com.android.example.github.ui.binding.FragmentBindingAdapters
 import org.hamcrest.CoreMatchers.not
 import org.junit.Before
 import org.junit.Rule
@@ -79,7 +79,6 @@ class RepoFragmentTest {
                 RepoFragmentArgs("a", "b").toBundle()) {
             RepoFragment().apply {
                 appExecutors = countingAppExecutors.appExecutors
-                viewModelFactory = ViewModelUtil.createFor(viewModel)
                 dataBindingComponent = object : DataBindingComponent {
                     override fun getFragmentBindingAdapters(): FragmentBindingAdapters {
                         return mockBindingAdapter

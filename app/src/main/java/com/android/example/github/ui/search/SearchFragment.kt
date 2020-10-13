@@ -33,9 +33,9 @@ import androidx.lifecycle.Observer
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.android.example.github.AppExecutors
 import com.android.example.github.R
 import com.android.example.github.databinding.SearchFragmentBinding
+import com.android.example.github.repository.util.AppExecutors
 import com.android.example.github.repository.util.autoCleared
 import com.android.example.github.ui.binding.FragmentDataBindingComponent
 import com.android.example.github.ui.common.RepoListAdapter

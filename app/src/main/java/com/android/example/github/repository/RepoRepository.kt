@@ -18,7 +18,6 @@ package com.android.example.github.repository
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.switchMap
-import com.android.example.github.AppExecutors
 import com.android.example.github.data.api.ApiSuccessResponse
 import com.android.example.github.data.api.GithubService
 import com.android.example.github.data.api.RepoSearchResponse
@@ -28,9 +27,10 @@ import com.android.example.github.data.model.Contributor
 import com.android.example.github.data.model.Repo
 import com.android.example.github.data.model.RepoSearchResult
 import com.android.example.github.data.model.Resource
-import com.android.example.github.testing.OpenForTesting
 import com.android.example.github.repository.util.AbsentLiveData
+import com.android.example.github.repository.util.AppExecutors
 import com.android.example.github.repository.util.RateLimiter
+import com.android.example.github.testing.OpenForTesting
 import java.util.concurrent.TimeUnit
 import javax.inject.Inject
 import javax.inject.Singleton
@@ -45,10 +45,10 @@ import javax.inject.Singleton
 @Singleton
 @OpenForTesting
 class RepoRepository @Inject constructor(
-    private val appExecutors: AppExecutors,
-    private val db: GithubDb,
-    private val repoDao: RepoDao,
-    private val githubService: GithubService
+        private val appExecutors: AppExecutors,
+        private val db: GithubDb,
+        private val repoDao: RepoDao,
+        private val githubService: GithubService
 ) {
 
     private val repoListRateLimit = RateLimiter<String>(10, TimeUnit.MINUTES)

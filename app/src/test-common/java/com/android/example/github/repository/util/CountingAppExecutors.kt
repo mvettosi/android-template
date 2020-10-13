@@ -16,7 +16,6 @@
 
 package com.android.example.github.repository.util
 
-import com.android.example.github.AppExecutors
 import java.util.concurrent.Executor
 import java.util.concurrent.Executors
 import java.util.concurrent.TimeUnit

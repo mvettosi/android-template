@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.android.example.github
+package com.android.example.github.repository.util
 
 import android.os.Handler
 import android.os.Looper

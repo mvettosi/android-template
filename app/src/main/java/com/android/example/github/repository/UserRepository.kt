@@ -17,11 +17,11 @@
 package com.android.example.github.repository
 
 import androidx.lifecycle.LiveData
-import com.android.example.github.AppExecutors
 import com.android.example.github.data.api.GithubService
 import com.android.example.github.data.db.UserDao
 import com.android.example.github.data.model.Resource
 import com.android.example.github.data.model.User
+import com.android.example.github.repository.util.AppExecutors
 import com.android.example.github.testing.OpenForTesting
 import javax.inject.Inject
 import javax.inject.Singleton
@@ -32,9 +32,9 @@ import javax.inject.Singleton
 @OpenForTesting
 @Singleton
 class UserRepository @Inject constructor(
-    private val appExecutors: AppExecutors,
-    private val userDao: UserDao,
-    private val githubService: GithubService
+        private val appExecutors: AppExecutors,
+        private val userDao: UserDao,
+        private val githubService: GithubService
 ) {
 
     fun loadUser(login: String): LiveData<Resource<User>> {
