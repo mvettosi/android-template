@@ -17,7 +17,6 @@
 package com.android.example.github.repository.util
 
 import androidx.fragment.app.Fragment
-import androidx.fragment.app.testing.FragmentScenario
 import androidx.test.espresso.IdlingRegistry
 import org.junit.rules.TestWatcher
 import org.junit.runner.Description
@@ -28,7 +27,7 @@ import org.junit.runner.Description
 class DataBindingIdlingResourceRule : TestWatcher() {
     private val idlingResource = DataBindingIdlingResource()
     
-    fun monitorFragment(fragmentScenario: FragmentScenario<out Fragment>) {
+    fun monitorFragment(fragmentScenario: Fragment) {
         idlingResource.monitorFragment(fragmentScenario)
     }
 

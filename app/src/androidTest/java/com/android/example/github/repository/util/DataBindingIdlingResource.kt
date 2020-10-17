@@ -44,14 +44,14 @@ class DataBindingIdlingResource : IdlingResource {
     // onTransitionToIdle callbacks if Espresso never thought we were idle in the first place.
     private var wasNotIdle = false
 
-    private lateinit var scenario: FragmentScenario<out Fragment>
+    private lateinit var scenario: Fragment
 
     override fun getName() = "DataBinding $id"
 
     /**
      * Sets the fragment from a [FragmentScenario] to be used from [DataBindingIdlingResource].
      */
-    fun monitorFragment(fragmentScenario: FragmentScenario<out Fragment>) {
+    fun monitorFragment(fragmentScenario: Fragment) {
         scenario = fragmentScenario
     }
 
@@ -67,14 +67,12 @@ class DataBindingIdlingResource : IdlingResource {
         } else {
             wasNotIdle = true
             // check next frame
-            scenario.onFragment { fragment ->
-                fragment.view?.postDelayed({
-                    if (fragment.view != null) {
+            scenario.view?.postDelayed({
+                    if (scenario.view != null) {
                         isIdleNow
                     }
                 }, 16)
             }
-        }
         return idle
     }
 
@@ -87,11 +85,9 @@ class DataBindingIdlingResource : IdlingResource {
      */
     private fun getBindings(): List<ViewDataBinding> {
         lateinit var bindings: List<ViewDataBinding>
-        scenario.onFragment {  fragment ->
-            bindings = fragment.requireView().flattenHierarchy().mapNotNull { view ->
+            bindings = scenario.requireView().flattenHierarchy().mapNotNull { view ->
                 DataBindingUtil.getBinding<ViewDataBinding>(view)
             }
-        }
         return bindings
     }
 

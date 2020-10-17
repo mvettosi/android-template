@@ -21,6 +21,9 @@
     <uses-permission android:name="android.permission.INTERNET" />
     <application tools:ignore="GoogleAppIndexingWarning">
         <activity android:name=".testing.SingleFragmentActivity" />
+        <activity
+            android:name=".testing.HiltTestActivity"
+            android:exported="false"  />
     </application>
 
 </manifest>

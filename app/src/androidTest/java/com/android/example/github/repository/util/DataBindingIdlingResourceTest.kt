@@ -52,8 +52,11 @@ class DataBindingIdlingResourceTest {
 
     @Before
     fun init() {
-        scenario = launchFragmentInContainer<TestFragment>()
-        idlingResource.monitorFragment(scenario)
+        launchFragmentInContainer {
+            TestFragment().also {  fragment ->
+                idlingResource.monitorFragment(fragment)
+            }
+        }
         IdlingRegistry.getInstance().register(idlingResource)
         Espresso.onIdle()
     }

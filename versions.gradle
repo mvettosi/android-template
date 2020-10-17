@@ -118,6 +118,7 @@ hilt.compiler = "com.google.dagger:hilt-android-compiler:$versions.hilt"
 hilt.androidxcompiler = "androidx.hilt:hilt-compiler:$versions.hilt_androidx"
 hilt.viewmodel = "androidx.hilt:hilt-lifecycle-viewmodel:$versions.hilt_androidx"
 hilt.workmanager = "androidx.hilt:hilt-work:$versions.hilt_androidx"
+hilt.androidtest = "com.google.dagger:hilt-android-testing:$versions.hilt"
 deps.hilt = hilt
 
 deps.dexmaker = "com.linkedin.dexmaker:dexmaker-mockito:$versions.dexmaker"

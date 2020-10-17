@@ -37,6 +37,7 @@ import com.android.example.github.data.model.Repo
 import com.android.example.github.data.model.Resource
 import com.android.example.github.repository.util.*
 import com.android.example.github.ui.binding.FragmentBindingAdapters
+import dagger.hilt.android.testing.HiltAndroidTest
 import org.hamcrest.CoreMatchers.not
 import org.junit.Before
 import org.junit.Rule
@@ -50,6 +51,7 @@ import org.mockito.Mockito.doNothing
 import org.mockito.Mockito.mock
 import org.mockito.Mockito.verify
 
+@HiltAndroidTest
 @RunWith(AndroidJUnit4::class)
 class RepoFragmentTest {
     @Rule
@@ -75,21 +77,29 @@ class RepoFragmentTest {
         doNothing().`when`(viewModel).setId(anyString(), anyString())
         `when`(viewModel.repo).thenReturn(repoLiveData)
         `when`(viewModel.contributors).thenReturn(contributorsLiveData)
-        val scenario = launchFragmentInContainer(
-                RepoFragmentArgs("a", "b").toBundle()) {
-            RepoFragment().apply {
-                appExecutors = countingAppExecutors.appExecutors
-                dataBindingComponent = object : DataBindingComponent {
-                    override fun getFragmentBindingAdapters(): FragmentBindingAdapters {
-                        return mockBindingAdapter
+
+        launchFragmentInHiltContainer<RepoFragment> {
+            RepoFragment().also {  fragment ->
+                // In addition to returning a new instance of our Fragment,
+                // get a callback whenever the fragment’s view is created
+                // or destroyed so that we can set the NavController
+                fragment.viewLifecycleOwnerLiveData.observeForever { viewLifecycleOwner ->
+                    fragment.apply {
+                        appExecutors = countingAppExecutors.appExecutors
+                        dataBindingComponent = object : DataBindingComponent {
+                            override fun getFragmentBindingAdapters(): FragmentBindingAdapters {
+                                return mockBindingAdapter
+                            }
+                        }
+                    }
+                    if (viewLifecycleOwner != null) { // The fragment’s view has just been created
+                        Navigation.setViewNavController(fragment.requireView(), navController)
+                        fragment.disableProgressBarAnimations()
+                        dataBindingIdlingResourceRule.monitorFragment(fragment)
                     }
                 }
+
             }
-        }
-        dataBindingIdlingResourceRule.monitorFragment(scenario)
-        scenario.onFragment { fragment ->
-            Navigation.setViewNavController(fragment.requireView(), navController)
-            fragment.disableProgressBarAnimations()
         }
     }
 

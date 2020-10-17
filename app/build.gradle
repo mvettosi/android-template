@@ -121,6 +121,10 @@ dependencies {
     androidTestImplementation deps.arch_core.testing
     androidTestImplementation deps.mockito.core
     androidTestImplementation deps.mockito.android
+
+    androidTestImplementation deps.hilt.androidtest
+    kaptAndroidTest deps.hilt.compiler
+    kaptAndroidTest deps.hilt.androidxcompiler
 }
 
 // we need all open to run tests which we enable only for debug builds.
