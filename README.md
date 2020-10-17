@@ -1,103 +1,57 @@
-Github Browser Sample with Android Architecture Components
-===========================================================
+# kotlin-android-template 🤖
 
-This is a sample app that uses Android Architecture Components with Dagger 2.
+[![Use this template](https://img.shields.io/badge/from-kotlin--android--template-brightgreen?logo=dropbox)](https://github.com/cortinico/kotlin-android-template/generate) ![Pre Merge Checks](https://github.com/cortinico/kotlin-android-template/workflows/Pre%20Merge%20Checks/badge.svg)  ![License](https://img.shields.io/github/license/cortinico/kotlin-android-template.svg) ![Language](https://img.shields.io/github/languages/top/cortinico/kotlin-android-template?color=blue&logo=kotlin)
 
-**NOTE** It is a relatively more complex and complete example so if you are not familiar
-with [Architecture Components][arch], you are highly recommended to check other examples
-in this repository first.
+A simple Github template that lets you create an **Android/Kotlin** project and be up and running in a **few seconds**. 
 
-Introduction
--------------
+This template is focused on delivering a project with **static analysis** and **continuous integration** already in place.
 
-### Functionality
-The app is composed of 3 main screens.
-#### SearchFragment
-Allows you to search repositories on Github.
-Each search result is kept in the database in `RepoSearchResult` table where
-the list of repository IDs are denormalized into a single column.
-The actual `Repo` instances live in the `Repo` table.
+## How to use 👣
 
-Each time a new page is fetched, the same `RepoSearchResult` record in the
-Database is updated with the new list of repository ids.
+Just click on [![Use this template](https://img.shields.io/badge/-Use%20this%20template-brightgreen)](https://github.com/cortinico/kotlin-android-template/generate) button to create a new repo starting from this template.
 
-**NOTE** The UI currently loads all `Repo` items at once, which would not
-perform well on lower end devices. Instead of manually writing lazy
-adapters, we've decided to wait until the built in support in Room is released.
+Once created don't forget to update the:
+- [App ID](buildSrc/src/main/java/Coordinates.kt)
+- AndroidManifest ([here](app/src/main/AndroidManifest.xml) and [here](library-android/src/main/AndroidManifest.xml))
+- Package of the source files
 
-#### RepoFragment
-This fragment displays the details of a repository and its contributors.
-#### UserFragment
-This fragment displays a user and their repositories.
+## Features 🎨
 
-### Building
-You can open the project in Android studio and press run.
-### Testing
-The project uses both instrumentation tests that run on the device
-and local unit tests that run on your computer.
-To run both of them and generate a coverage report, you can run:
+- **100% Kotlin-only template**.
+- 3 Sample modules (Android app, Android library, Kotlin library).
+- Sample Espresso, Instrumentation & JUnit tests.
+- 100% Gradle Kotlin DSL setup.
+- Dependency versions managed via `buildSrc`.
+- CI Setup with GitHub Actions.
+- Kotlin Static Analysis via `ktlint` and `detekt`.
+- Publishing Ready.
+- Issues Template (bug report + feature request)
+- Pull Request Template.
 
-`./gradlew fullCoverageReport` (requires a connected device or an emulator)
+## Gradle Setup 🐘
 
-#### Device Tests
-##### UI Tests
-The projects uses Espresso for UI testing. Since each fragment
-is limited to a ViewModel, each test mocks related ViewModel to
-run the tests.
-##### Database Tests
-The project creates an in memory database for each database test but still
-runs them on the device.
+This template is using [**Gradle Kotlin DSL**](https://docs.gradle.org/current/userguide/kotlin_dsl.html) as well as the [Plugin DSL](https://docs.gradle.org/current/userguide/plugins.html#sec:plugins_block) to setup the build.
 
-#### Local Unit Tests
-##### ViewModel Tests
-Each ViewModel is tested using local unit tests with mock Repository
-implementations.
-##### Repository Tests
-Each Repository is tested using local unit tests with mock web service and
-mock database.
-##### Webservice Tests
-The project uses [MockWebServer][mockwebserver] project to test REST api interactions.
+Dependencies are centralized inside the [Dependencies.kt](buildSrc/src/main/java/Dependencies.kt) file in the `buildSrc` folder. This provides convenient auto-completion when writing your gradle files.
 
+## Static Analysis 🔍
 
-### Libraries
-* [Android Support Library][support-lib]
-* [Android Architecture Components][arch]
-* [Android Data Binding][data-binding]
-* [Dagger 2][dagger2] for dependency injection
-* [Retrofit][retrofit] for REST api communication
-* [Glide][glide] for image loading
-* [Timber][timber] for logging
-* [espresso][espresso] for UI tests
-* [mockito][mockito] for mocking in tests
+This template is using [**ktlint**](https://github.com/pinterest/ktlint) with the [ktlint-gradle](https://github.com/jlleitschuh/ktlint-gradle) plugin to format your code. To reformat all the source code as well as the buildscript you can run the `ktlintFormat` gradle task.
 
+This template is also using [**detekt**](https://github.com/detekt/detekt) to analyze the source code, with the configuration that is stored in the [detekt.yml](config/detekt/detekt.yml) file (the file has been generated with the `detektGenerateConfig` task).
 
-[mockwebserver]: https://github.com/square/okhttp/tree/master/mockwebserver
-[support-lib]: https://developer.android.com/topic/libraries/support-library/index.html
-[arch]: https://developer.android.com/arch
-[data-binding]: https://developer.android.com/topic/libraries/data-binding/index.html
-[espresso]: https://google.github.io/android-testing-support-library/docs/espresso/
-[dagger2]: https://google.github.io/dagger
-[retrofit]: http://square.github.io/retrofit
-[glide]: https://github.com/bumptech/glide
-[timber]: https://github.com/JakeWharton/timber
-[mockito]: http://site.mockito.org
+## CI ⚙️
 
-License
---------
+This template is using [**GitHub Actions**](https://github.com/cortinico/kotlin-android-template/actions) as CI. You don't need to setup any external service and you should have a running CI once you start using this template.
 
-Copyright 2017 The Android Open Source Project, Inc.
+There are currently the following workflows available:
+- [Validate Gradle Wrapper](.github/workflows/gradle-wrapper-validation.yml) - Will check that the gradle wrapper has a valid checksum
+- [Pre Merge Checks](.github/workflows/pre-merge.yaml) - Will run the `build`, `check` and `publishToMavenLocal` tasks. 
 
-Licensed to the Apache Software Foundation (ASF) under one or more contributor
-license agreements.  See the NOTICE file distributed with this work for
-additional information regarding copyright ownership.  The ASF licenses this
-file to you under the Apache License, Version 2.0 (the "License"); you may not
-use this file except in compliance with the License.  You may obtain a copy of
-the License at
+## Publishing 🚀
 
-http://www.apache.org/licenses/LICENSE-2.0
+The template is setup to be **ready to publish** a library/artifact on a Maven Repository. If you're using JitPack, you don't need any further configuration and you can just configure the repo on JitPack. If you're using another repository (MavenCentral/JCenter/etc.), you need to specify the publishing coordinates.
 
-Unless required by applicable law or agreed to in writing, software
-distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
-WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.  See the
-License for the specific language governing permissions and limitations under
-the License.
+## Contributing 🤝
+
+Feel free to open a issue or submit a pull request for any bugs/improvements.
