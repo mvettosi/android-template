@@ -17,7 +17,7 @@ pluginManagement {
     }
 }
 
-rootProject.name = ("kotlin-android-template")
+rootProject.name = ("mvettosi-android-template")
 
 include(
     "app",
