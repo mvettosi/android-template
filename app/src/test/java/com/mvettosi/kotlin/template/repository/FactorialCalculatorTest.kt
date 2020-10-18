@@ -1,6 +1,6 @@
-package com.mvettosi.kotlin.template.app
+package com.mvettosi.kotlin.template.ui
 
-import com.mvettosi.kotlin.template.app.FactorialCalculator.computeFactorial
+import com.mvettosi.kotlin.template.repository.FactorialCalculator.computeFactorial
 import org.junit.jupiter.api.Assertions.assertEquals
 import org.junit.jupiter.api.Assertions.assertThrows
 import org.junit.jupiter.api.Test

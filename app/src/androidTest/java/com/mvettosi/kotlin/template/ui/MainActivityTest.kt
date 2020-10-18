@@ -1,4 +1,4 @@
-package com.mvettosi.kotlin.template.app
+package com.mvettosi.kotlin.template.ui
 
 import androidx.test.espresso.Espresso.onView
 import androidx.test.espresso.action.ViewActions.click

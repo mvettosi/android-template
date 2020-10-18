@@ -1,4 +1,4 @@
-package com.mvettosi.kotlin.template.app
+package com.mvettosi.kotlin.template.repository
 
 object FactorialCalculator {
 
