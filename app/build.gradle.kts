@@ -2,6 +2,7 @@ plugins {
     id("com.android.application")
     kotlin("android")
     id("kotlin-android-extensions")
+    id("kotlin-android")
 }
 
 android {
@@ -42,6 +43,7 @@ dependencies {
     implementation(SupportLibs.ANDROIDX_APPCOMPAT)
     implementation(SupportLibs.ANDROIDX_CONSTRAINT_LAYOUT)
     implementation(SupportLibs.ANDROIDX_CORE_KTX)
+    implementation("androidx.legacy:legacy-support-v4:1.0.0")
 
     testImplementation(TestingLib.JUNIT_API)
     testRuntimeOnly(TestingLib.JUNIT_ENGINE)
