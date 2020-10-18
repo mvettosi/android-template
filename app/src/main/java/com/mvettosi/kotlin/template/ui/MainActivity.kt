@@ -1,12 +1,8 @@
 package com.mvettosi.kotlin.template.ui
 
 import android.os.Bundle
-import android.view.View
 import androidx.appcompat.app.AppCompatActivity
-import com.mvettosi.kotlin.template.repository.FactorialCalculator
-import com.mvettosi.kotlin.template.repository.NotificationUtil
 import com.mvettosi.kotlin.template.ui.factorial.FactorialFragment
-import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
 
