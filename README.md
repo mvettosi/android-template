@@ -12,13 +12,12 @@ Just click on [![Use this template](https://img.shields.io/badge/-Use%20this%20t
 
 Once created don't forget to update the:
 - [App ID](buildSrc/src/main/java/Coordinates.kt)
-- AndroidManifest ([here](app/src/main/AndroidManifest.xml) and [here](library-android/src/main/AndroidManifest.xml))
+- AndroidManifest ([here](app/src/main/AndroidManifest.xml)
 - Package of the source files
 
 ## Features 🎨
 
 - **100% Kotlin-only template**.
-- 3 Sample modules (Android app, Android library, Kotlin library).
 - Sample Espresso, Instrumentation & JUnit tests.
 - 100% Gradle Kotlin DSL setup.
 - Dependency versions managed via `buildSrc`.

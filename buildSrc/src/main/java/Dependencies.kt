@@ -11,7 +11,7 @@ object Versions {
     const val CONSTRAINT_LAYOUT = "1.1.3"
     const val CORE_KTX = "1.2.0"
     const val ESPRESSO_CORE = "3.2.0"
-    const val JUNIT = "4.13"
+    const val JUNIT = "5.7.0"
     const val KTLINT = "0.37.2"
 }
 
@@ -30,7 +30,8 @@ object SupportLibs {
 }
 
 object TestingLib {
-    const val JUNIT = "junit:junit:${Versions.JUNIT}"
+    const val JUNIT_API = "org.junit.jupiter:junit-jupiter-api:${Versions.JUNIT}"
+    const val JUNIT_ENGINE = "org.junit.jupiter:junit-jupiter-engine:${Versions.JUNIT}"
 }
 
 object AndroidTestingLib {

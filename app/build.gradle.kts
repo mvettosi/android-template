@@ -39,14 +39,12 @@ android {
 dependencies {
     implementation(kotlin("stdlib-jdk7"))
 
-    implementation(project(":library-android"))
-    implementation(project(":library-kotlin"))
-
     implementation(SupportLibs.ANDROIDX_APPCOMPAT)
     implementation(SupportLibs.ANDROIDX_CONSTRAINT_LAYOUT)
     implementation(SupportLibs.ANDROIDX_CORE_KTX)
 
-    testImplementation(TestingLib.JUNIT)
+    testImplementation(TestingLib.JUNIT_API)
+    testRuntimeOnly(TestingLib.JUNIT_ENGINE)
 
     androidTestImplementation(AndroidTestingLib.ANDROIDX_TEST_EXT_JUNIT)
     androidTestImplementation(AndroidTestingLib.ANDROIDX_TEST_RULES)

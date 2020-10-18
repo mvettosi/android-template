@@ -19,8 +19,4 @@ pluginManagement {
 
 rootProject.name = ("mvettosi-android-template")
 
-include(
-    "app",
-    "library-android",
-    "library-kotlin"
-)
+include("app")

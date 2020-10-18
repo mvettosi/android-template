@@ -3,13 +3,15 @@ package com.mvettosi.kotlin.template.app
 import android.os.Bundle
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
-import com.mvettosi.kotlin.template.library.FactorialCalculator
-import com.mvettosi.kotlin.template.library.android.NotificationUtil
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
 
-    private val notificationUtil: NotificationUtil by lazy { NotificationUtil(this) }
+    private val notificationUtil: NotificationUtil by lazy {
+        NotificationUtil(
+            this
+        )
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

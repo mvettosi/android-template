@@ -1,4 +1,4 @@
-package com.mvettosi.kotlin.template.library.android
+package com.mvettosi.kotlin.template.app
 
 import android.app.Notification
 import android.app.NotificationChannel
@@ -28,7 +28,9 @@ class NotificationUtil(context: Context) {
     }
 
     fun showNotification(context: Context, title: String, message: String): Notification {
-        val builder = NotificationCompat.Builder(context, CHANNEL_ID)
+        val builder = NotificationCompat.Builder(context,
+            CHANNEL_ID
+        )
             .setSmallIcon(R.drawable.library_notification_icon)
             .setContentTitle(title)
             .setContentText(message)

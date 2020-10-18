@@ -1,4 +1,4 @@
-package com.mvettosi.kotlin.template.library
+package com.mvettosi.kotlin.template.app
 
 object FactorialCalculator {
 
@@ -6,6 +6,9 @@ object FactorialCalculator {
         when {
             input < 0 -> error("Factorial is not defined for negative numbers")
             input == 0 -> temp
-            else -> computeFactorial(input - 1, temp * input)
+            else -> computeFactorial(
+                input - 1,
+                temp * input
+            )
         }
 }
