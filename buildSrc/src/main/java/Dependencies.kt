@@ -13,6 +13,7 @@ object Versions {
     const val ESPRESSO_CORE = "3.2.0"
     const val JUNIT = "5.7.0"
     const val KTLINT = "0.37.2"
+    const val NAV = "2.3.1"
 }
 
 object BuildPluginsVersion {
@@ -27,6 +28,14 @@ object SupportLibs {
     const val ANDROIDX_APPCOMPAT = "androidx.appcompat:appcompat:${Versions.APPCOMPAT}"
     const val ANDROIDX_CONSTRAINT_LAYOUT = "com.android.support.constraint:constraint-layout:${Versions.CONSTRAINT_LAYOUT}"
     const val ANDROIDX_CORE_KTX = "androidx.core:core-ktx:${Versions.CORE_KTX}"
+}
+
+object NavigationLibs {
+    const val NAVIGATION_FRAGMENT = "androidx.navigation:navigation-fragment-ktx:${Versions.NAV}"
+    const val NAVIGATION_UI = "androidx.navigation:navigation-ui-ktx:${Versions.NAV}"
+    const val NAVIGATION_FEATURE_MODULE = "androidx.navigation:navigation-dynamic-features-fragment:${Versions.NAV}"
+    const val NAVIGATION_TEST = "androidx.navigation:navigation-testing:${Versions.NAV}"
+    const val NAVIGATION_SAFEARGS = "androidx.navigation:navigation-safe-args-gradle-plugin:${Versions.NAV}"
 }
 
 object TestingLib {

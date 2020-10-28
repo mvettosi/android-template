@@ -29,7 +29,8 @@ class NotificationUtil(context: Context) {
     }
 
     fun showNotification(context: Context, title: String, message: String): Notification {
-        val builder = NotificationCompat.Builder(context,
+        val builder = NotificationCompat.Builder(
+            context,
             CHANNEL_ID
         )
             .setSmallIcon(R.drawable.library_notification_icon)

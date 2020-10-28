@@ -1,5 +1,14 @@
 import com.github.benmanes.gradle.versions.updates.DependencyUpdatesTask
 
+buildscript {
+    repositories {
+        google()
+    }
+    dependencies {
+        classpath(NavigationLibs.NAVIGATION_SAFEARGS)
+    }
+}
+
 plugins {
     id("com.android.application") version BuildPluginsVersion.AGP apply false
     id("com.android.library") version BuildPluginsVersion.AGP apply false

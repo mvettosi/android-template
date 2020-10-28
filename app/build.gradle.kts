@@ -3,6 +3,7 @@ plugins {
     kotlin("android")
     id("kotlin-android-extensions")
     id("kotlin-android")
+    id("androidx.navigation.safeargs.kotlin")
 }
 
 android {
@@ -20,6 +21,9 @@ android {
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_1_8
         targetCompatibility = JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = JavaVersion.VERSION_1_8.toString()
     }
     buildTypes {
         getByName("release") {
@@ -44,6 +48,9 @@ dependencies {
     implementation(SupportLibs.ANDROIDX_CONSTRAINT_LAYOUT)
     implementation(SupportLibs.ANDROIDX_CORE_KTX)
     implementation("androidx.legacy:legacy-support-v4:1.0.0")
+    implementation(NavigationLibs.NAVIGATION_FRAGMENT)
+    implementation(NavigationLibs.NAVIGATION_UI)
+    implementation(NavigationLibs.NAVIGATION_FEATURE_MODULE)
 
     testImplementation(TestingLib.JUNIT_API)
     testRuntimeOnly(TestingLib.JUNIT_ENGINE)
@@ -51,4 +58,5 @@ dependencies {
     androidTestImplementation(AndroidTestingLib.ANDROIDX_TEST_EXT_JUNIT)
     androidTestImplementation(AndroidTestingLib.ANDROIDX_TEST_RULES)
     androidTestImplementation(AndroidTestingLib.ESPRESSO_CORE)
+    androidTestImplementation(NavigationLibs.NAVIGATION_TEST)
 }
