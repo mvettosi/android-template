@@ -1,62 +1,79 @@
 plugins {
     id("com.android.application")
     kotlin("android")
-    id("kotlin-android-extensions")
-    id("kotlin-android")
-    id("androidx.navigation.safeargs.kotlin")
+    kotlin("kapt")
+    id("dagger.hilt.android.plugin")
 }
 
 android {
-    compileSdkVersion(Sdk.COMPILE_SDK_VERSION)
+    compileSdk = Sdk.TARGET_SDK_VERSION
 
     defaultConfig {
-        minSdkVersion(Sdk.MIN_SDK_VERSION)
-        targetSdkVersion(Sdk.TARGET_SDK_VERSION)
-
         applicationId = AppCoordinates.APP_ID
-        versionCode = AppCoordinates.APP_VERSION_CODE
-        versionName = AppCoordinates.APP_VERSION_NAME
+        minSdk = Sdk.MIN_SDK_VERSION
+        targetSdk = Sdk.TARGET_SDK_VERSION
+        versionCode = 1
+        versionName = "1.0"
+
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+        vectorDrawables {
+            useSupportLibrary = true
+        }
+    }
+
+    buildTypes {
+        // Build Type Names
+        val release = "release"
+
+        getByName(release) {
+            // R8 Optimisations
+            isMinifyEnabled = true
+            proguardFiles(getDefaultProguardFile("proguard-android.txt"), "proguard-rules.pro")
+        }
     }
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_1_8
         targetCompatibility = JavaVersion.VERSION_1_8
     }
     kotlinOptions {
-        jvmTarget = JavaVersion.VERSION_1_8.toString()
+        jvmTarget = "1.8"
     }
-    buildTypes {
-        getByName("release") {
-            isMinifyEnabled = false
-            proguardFiles(
-                getDefaultProguardFile("proguard-android-optimize.txt"),
-                "proguard-rules.pro"
-            )
+    buildFeatures {
+        compose = true
+    }
+    composeOptions {
+        kotlinCompilerExtensionVersion = "1.0.1"
+    }
+    packagingOptions {
+        resources {
+            excludes += "/META-INF/{AL2.0,LGPL2.1}"
         }
-    }
-
-    lintOptions {
-        isWarningsAsErrors = true
-        isAbortOnError = true
     }
 }
 
 dependencies {
-    implementation(kotlin("stdlib-jdk7"))
+    // Core
+    implementation("androidx.core:core-ktx:1.6.0")
+    implementation("androidx.appcompat:appcompat:1.3.1")
+    implementation("com.google.android.material:material:1.4.0")
+    implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.3.1")
 
-    implementation(SupportLibs.ANDROIDX_APPCOMPAT)
-    implementation(SupportLibs.ANDROIDX_CONSTRAINT_LAYOUT)
-    implementation(SupportLibs.ANDROIDX_CORE_KTX)
-    implementation("androidx.legacy:legacy-support-v4:1.0.0")
-    implementation(NavigationLibs.NAVIGATION_FRAGMENT)
-    implementation(NavigationLibs.NAVIGATION_UI)
-    implementation(NavigationLibs.NAVIGATION_FEATURE_MODULE)
+    // Compose
+    implementation("androidx.compose.ui:ui:1.0.2")
+    implementation("androidx.compose.material:material:1.0.2")
+    implementation("androidx.compose.ui:ui-tooling-preview:1.0.2")
+    implementation("androidx.activity:activity-compose:1.3.1")
+    debugImplementation("androidx.compose.ui:ui-tooling:1.0.2")
 
-    testImplementation(TestingLib.JUNIT_API)
-    testRuntimeOnly(TestingLib.JUNIT_ENGINE)
+    // Hilt
+    implementation("com.google.dagger:hilt-android:2.37")
+    kapt("com.google.dagger:hilt-compiler:2.37")
 
-    androidTestImplementation(AndroidTestingLib.ANDROIDX_TEST_EXT_JUNIT)
-    androidTestImplementation(AndroidTestingLib.ANDROIDX_TEST_RULES)
-    androidTestImplementation(AndroidTestingLib.ESPRESSO_CORE)
-    androidTestImplementation(NavigationLibs.NAVIGATION_TEST)
+    // Test
+    testImplementation("junit:junit:4.13.2")
+
+    // AndroidTest
+    androidTestImplementation("androidx.test.ext:junit:1.1.3")
+    androidTestImplementation("androidx.test.espresso:espresso-core:3.4.0")
+    androidTestImplementation("androidx.compose.ui:ui-test-junit4:1.0.2")
 }
