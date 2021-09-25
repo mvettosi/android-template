@@ -1,3 +1,7 @@
+plugins {
+    id("com.diffplug.spotless") version ("5.15.0")
+}
+
 subprojects {
     repositories {
         google()
@@ -5,9 +9,10 @@ subprojects {
     }
 }
 
-tasks {
-    register("clean", Delete::class.java) {
-        delete(rootProject.buildDir)
+spotless {
+    kotlin {
+        target("**/src/**/*.kt")
+        ktfmt()
     }
 }
 

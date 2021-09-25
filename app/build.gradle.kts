@@ -1,3 +1,6 @@
+import com.android.build.gradle.internal.tasks.factory.dependsOn
+import org.apache.tools.ant.taskdefs.condition.Os
+
 plugins {
     id("com.android.application")
     kotlin("android")
@@ -76,4 +79,15 @@ dependencies {
     androidTestImplementation("androidx.test.ext:junit:1.1.3")
     androidTestImplementation("androidx.test.espresso:espresso-core:3.4.0")
     androidTestImplementation("androidx.compose.ui:ui-test-junit4:1.0.2")
+}
+
+tasks {
+    register("installGitHook", Copy::class.java) {
+        val suffix = if (Os.isFamily(Os.FAMILY_WINDOWS)) "windows" else "unix"
+        from(File(rootProject.rootDir, "scripts/pre-commit-$suffix"))
+        into(File(rootProject.rootDir, ".git/hooks"))
+        rename("pre-commit-$suffix", "pre-commit")
+        fileMode = 775
+    }
+    named("preBuild").dependsOn("installGitHook")
 }
