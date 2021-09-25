@@ -1,7 +1,7 @@
 package com.mvettosi.template
 
 import kotlin.math.pow
-import org.junit.Assert.*
+import org.junit.Assert.assertEquals
 import org.junit.Test
 
 /**

@@ -9,9 +9,10 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.template">
+        android:theme="@style/Theme.template"
+        android:name=".TemplateApp">
         <activity
-            android:name=".MainActivity"
+            android:name=".entrypoint.ui.MainActivity"
             android:exported="true"
             android:label="@string/app_name"
             android:theme="@style/Theme.template.NoActionBar">

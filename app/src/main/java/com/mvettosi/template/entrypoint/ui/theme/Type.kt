@@ -1,4 +1,4 @@
-package com.mvettosi.template.ui.theme
+package com.mvettosi.template.entrypoint.ui.theme
 
 import androidx.compose.material.Typography
 import androidx.compose.ui.text.TextStyle
