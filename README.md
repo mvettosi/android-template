@@ -5,6 +5,7 @@ Feel free to reach me out by opening an issue here, e-mailing me on `matteo.vett
 
 ## Currently included
 - Clean Architecture
+- Hilt dependency injection
 - Gradle kotlin DSL
 - Jetpack Compose
 - Compose Navigation
