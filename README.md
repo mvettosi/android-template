@@ -17,3 +17,37 @@ Feel free to reach me out by opening an issue here, e-mailing me on `matteo.vett
 - Sample UI test
 - Gradle dependencies version management
 - versionName and versionCode build-time generation
+
+## Package structure
+This project is made up of two modules:
+- `app` meant to contain classes and business logic that interfaces with the host OS and third party libraries
+- `core` meant to contain all the internal business logic
+
+### App package structure
+Every class in the app module should follow this structure:
+```
+.
+├── entrypoint
+│   ├── receivers
+│   │   └── <Broadcast Receivers here>
+│   ├── services
+│   │   └── <Other Services here>
+│   ├── ui
+│   │   └── <UI Classes and ViewModels here>
+│   └── workers
+│       └── <WorkManager Workers here>
+└── framework
+    └── <Implementation of DataSource interfaces here>
+```
+
+### Core package structure
+Every class in the core module should follow this structure:
+```
+.
+├── data
+│   └── <Repositories and DataSource interfaces here>
+├── domain
+│   └── <Internal Model classes here>
+└── usecases
+    └── <UseCase Classes here>
+```
