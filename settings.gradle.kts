@@ -1,22 +1,15 @@
-pluginManagement {
-    resolutionStrategy {
-        eachPlugin {
-            if (requested.id.id == "com.android.library") {
-                useModule("com.android.tools.build:gradle:${requested.version}")
-            }
-            if (requested.id.id == "com.android.application") {
-                useModule("com.android.tools.build:gradle:${requested.version}")
-            }
-        }
-    }
-    repositories {
-        gradlePluginPortal()
-        google()
-        mavenCentral()
-        jcenter()
-    }
+@file:Suppress("UnstableApiUsage")
+
+dependencyResolutionManagement {
+  repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+  repositories {
+    google()
+    mavenCentral()
+  }
 }
 
-rootProject.name = ("mvettosi-android-template")
+rootProject.name = "template"
 
-include("app")
+include(":app")
+
+include(":core")
