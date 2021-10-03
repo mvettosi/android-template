@@ -9,7 +9,7 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.template"
+        android:theme="@style/Theme.template.NoActionBar"
         android:name=".TemplateApp">
         <activity
             android:name=".entrypoint.ui.MainActivity"
